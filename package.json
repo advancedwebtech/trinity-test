@@ -4,8 +4,8 @@
   "description": "",
   "scripts": {
     "build": "npm run build:scss && npm run copy:plugins",
-    "build:scss": "node-sass ./src/stylesheets -o ./dist/stylesheets --output-style compressed",
-    "build:scss:watch": "node-sass -w ./src/stylesheets -o ./dist/stylesheets",
+    "build:scss": "node-sass ./src/stylesheets -o ./dist/css --output-style compressed",
+    "build:scss:watch": "node-sass -w ./src/stylesheets -o ./dist/css",
     "dev": "npm run build:scss:watch",
     "copy:plugins": "node ./copy-plugins"
   },
