@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "npm run build:scss && npm run copy:plugins",
+    "build": "npm run build:scss && npm run copy:files",
     "build:scss": "node-sass ./src/stylesheets -o ./dist/css --output-style compressed",
     "build:scss:watch": "node-sass -w ./src/stylesheets -o ./dist/css",
     "dev": "npm run build:scss:watch",
-    "copy:plugins": "node ./copy-plugins"
+    "copy:files": "node ./copy-files"
   },
   "repository": {
     "type": "git",

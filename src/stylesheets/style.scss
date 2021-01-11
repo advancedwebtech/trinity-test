@@ -1,8 +1,17 @@
 @import 'dist/plugins/bootstrap/scss/bootstrap';
 
-$body-color: red;
+.trinity {
+  &__navbar {
+    &__call {
+      position: fixed;
 
-body {
-  color: $body-color;
-  display: block;
+      @include media-breakpoint-up(sm) {
+        position: static;
+      }
+    }
+
+    &__logo {
+      //
+    }
+  }
 }
