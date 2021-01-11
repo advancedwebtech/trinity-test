@@ -5,7 +5,7 @@
 
 .trinity {
   &__navbar {
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       padding-top: 120px;
     }
 
@@ -17,7 +17,7 @@
       padding: 8px 0;
       width: 100%;
 
-      @include media-breakpoint-up(md) {
+      @include media-breakpoint-up(lg) {
         background-color: transparent;
         font-size: 20px;
         margin-bottom: 0;
@@ -27,7 +27,7 @@
     }
 
     &__logo {
-      @include media-breakpoint-up(md) {
+      @include media-breakpoint-up(lg) {
         height: auto;
         width: 215px;
       }
@@ -36,16 +36,19 @@
 
   &__hero {
     background-color: var(--color-bg);
+    border-bottom: 1px solid var(--color-line);
+    margin-bottom: 31.5px;
     padding-top: 132px;
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 79.5px;
       padding-top: 234px;
     }
 
     &__bottom {
-      padding-bottom: 96px;
+      padding-bottom: 120px;
 
-      @include media-breakpoint-up(md) {
+      @include media-breakpoint-up(lg) {
         background-color: var(--color-white);
         padding-bottom: 106px;
         padding-top: 42px;
@@ -58,7 +61,7 @@
       margin-bottom: 16px;
       max-width: 584px;
 
-      @include media-breakpoint-up(md) {
+      @include media-breakpoint-up(lg) {
         margin-bottom: 26px;
       }
     }
@@ -68,7 +71,7 @@
       line-height: 26px;
       margin-bottom: 16px;
 
-      @include media-breakpoint-up(md) {
+      @include media-breakpoint-up(lg) {
         margin-bottom: 86px;
       }
     }
@@ -76,7 +79,7 @@
     &__description {
       color: var(--color-white);
 
-      @include media-breakpoint-up(md) {
+      @include media-breakpoint-up(lg) {
         color: var(--color-dark);
       }
 
@@ -85,7 +88,7 @@
       }
 
       u {
-        @include media-breakpoint-up(md) {
+        @include media-breakpoint-up(lg) {
           color: var(--color-bg);
         }
       }
@@ -100,7 +103,7 @@
         display: grid;
         grid-gap: 8px;
 
-        @include media-breakpoint-up(md) {
+        @include media-breakpoint-up(lg) {
           color: var(--color-dark);
         }
 
@@ -121,6 +124,78 @@
             width: 12px;
           }
         }
+      }
+    }
+  }
+
+  &__signup-form {
+    &__container {
+      background-color: var(--color-white);
+      padding-bottom: 31.5px;
+
+      @include media-breakpoint-up(lg) {
+        background-color: transparent;
+        padding-bottom: 79.5px;
+        pointer-events: none;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    }
+
+    &__wrapper {
+      border-radius: 7PX;
+      box-shadow: 0 10px 20px 0 rgba(var(--color-white), .2);
+      margin-top: -96px;
+      padding: 32px 17px;
+      pointer-events: all;
+
+      @include media-breakpoint-up(lg) {
+        margin-top: 0;
+      }
+    }
+
+    &__alert {
+      color: var(--color-red);
+      font-size: 18px;
+      letter-spacing: 3.13px;
+      line-height: 24px;
+      margin-bottom: 3px;
+
+      @include media-breakpoint-up(lg) {
+        font-size: 22px;
+        letter-spacing: 3.83px;
+        line-height: 29px;
+        margin-bottom: 22px;
+      }
+    }
+
+    &__title {
+      color: var(--color-bg);
+      font-size: 22px;
+      line-height: 30px;
+      margin-bottom: 16px;
+
+      @include media-breakpoint-up(lg) {
+        font-size: 36px;
+        line-height: 48px;
+        margin-bottom: 43px;
+      }
+    }
+
+    button[type="submit"] {
+      background-color: var(--color-bg);
+    }
+
+    .form-group {
+      margin-bottom: 21.5px;
+
+      @include media-breakpoint-up(lg) {
+        margin-bottom: 23.5px;
+      }
+
+      label {
+        margin-bottom: 7.5px;
       }
     }
   }
