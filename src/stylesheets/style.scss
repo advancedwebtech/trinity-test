@@ -419,4 +419,22 @@
       padding: 0 8px;
     }
   }
+
+  &__footer {
+    background-color: var(--color-bg);
+    padding: 16px 0;
+
+    @include media-breakpoint-up(lg) {
+      padding: 24px 0 17px;
+    }
+
+    &__logo {
+      margin-bottom: 14px;
+    }
+
+    &__right {
+      font-size: 16px;
+      line-height: 25px;
+    }
+  }
 }
