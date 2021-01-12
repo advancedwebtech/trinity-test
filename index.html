@@ -180,8 +180,59 @@
       </div>
     </div>
   </section>
+  <section class="trinity__section trinity__section--customers">
+    <div class="container">
+      <h2 class="trinity__section__title text-center">TRUSTED BY:</h2>
+      <div class="trinity__customers-slider">
+        <div>
+          <img class="img-fluid" src="dist/images/logo-one.png">
+        </div>
+        <div>
+          <img class="img-fluid" src="dist/images/logo-two.png">
+        </div>
+        <div>
+          <img class="img-fluid" src="dist/images/logo-three.png">
+        </div>
+        <div>
+          <img class="img-fluid" src="dist/images/logo-4.png">
+        </div>
+        <div>
+          <img class="img-fluid" src="dist/images/logo-five.png">
+        </div>
+        <div>
+          <img class="img-fluid" src="dist/images/logo-six.png">
+        </div>
+        <div>
+          <img class="img-fluid" src="dist/images/logo-seven.png">
+        </div>
+        <div>
+          <img class="img-fluid" src="dist/images/logo-eight.png">
+        </div>
+      </div>
+    </div>
+  </section>
 
   <script src="dist/plugins/jquery/dist/jquery.slim.min.js"></script>
   <script src="dist/plugins/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="dist/plugins/slick-carousel/slick/slick.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $('.trinity__customers-slider').slick({
+        arrows: true,
+        dots: false,
+        slidesToShow: 5,
+        responsive: [{
+          breakpoint: 1199.98,
+          settings: {
+            arrows: false,
+            dots: true,
+            slidesToScroll: 2,
+            slidesToShow: 2
+          }
+        }]
+      })
+    });
+  </script>
 </body>
 </html>

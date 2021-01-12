@@ -16,7 +16,8 @@
   "author": "",
   "dependencies": {
     "bootstrap": "^4.5.3",
-    "jquery": "^3.5.1"
+    "jquery": "^3.5.1",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "fs": "0.0.1-security",

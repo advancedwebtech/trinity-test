@@ -1,5 +1,7 @@
-@import 'dist/plugins/bootstrap/scss/bootstrap.scss';
 @import 'variables';
+@import 'dist/plugins/bootstrap/scss/bootstrap.scss';
+@import 'dist/plugins/slick-carousel/slick/slick.scss';
+@import 'dist/plugins/slick-carousel/slick/slick-theme.scss';
 @import 'functions';
 @import 'typography';
 @import '_normalize';
@@ -224,6 +226,7 @@
     }
 
     &__title {
+      color: var(--color-dark);
       font-size: 22px;
       line-height: 30px;
       margin-bottom: 24px;
@@ -244,6 +247,23 @@
 
           @include media-breakpoint-up(lg) {
             margin-bottom: 48px;
+          }
+        }
+      }
+    }
+
+    &--customers {
+      #{ $section } {
+        &__title {
+          font-size: 18px;
+          letter-spacing: 1.64px;
+          line-height: 25px;
+          margin-bottom: 16px;
+
+          @include media-breakpoint-up(lg) {
+            font-size: 22px;
+            letter-spacing: 2px;
+            margin-bottom: 32px;
           }
         }
       }
@@ -391,6 +411,12 @@
       font-size: 16px;
       line-height: 25px;
       margin-bottom: 8px;
+    }
+  }
+
+  &__customers-slider {
+    .slick-slide {
+      padding: 0 8px;
     }
   }
 }

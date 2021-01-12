@@ -3,7 +3,8 @@ const copy = require('recursive-copy')
 
 const plugins = [
   'jquery',
-  'bootstrap'
+  'bootstrap',
+  'slick-carousel'
 ]
 const distPlugins = './dist/plugins'
 
