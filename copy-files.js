@@ -37,3 +37,18 @@ fs.rmdir(distImages, { recursive: true })
       }
     })
   })
+
+const distJs = './dist/js'
+
+fs.rmdir(distJs, { recursive: true })
+  .then(() => {
+    console.log('JS directory removed!')
+
+    copy('./src/js', distJs, function(error, results) {
+      if (error) {
+        console.error(`Copy failed: ${error}`)
+      } else {
+        console.info(`Copied ${results.length} files`)
+      }
+    })
+  })

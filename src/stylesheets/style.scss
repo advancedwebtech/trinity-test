@@ -70,23 +70,34 @@
   }
 
   &__hero {
-    background-color: var(--color-bg);
-    border-bottom: 1px solid var(--color-line);
     margin-bottom: 31.5px;
-    padding-top: 132px;
 
     @include media-breakpoint-up(lg) {
-      margin-bottom: 79.5px;
-      padding-top: 234px;
+      margin-bottom: 0;
     }
 
     &__bottom {
+      background-color: var(--color-bg);
+      clip-path: polygon(0 0, 100% 0, 100% 92%, 0% 100%);
       padding-bottom: 120px;
 
       @include media-breakpoint-up(lg) {
         background-color: var(--color-white);
+        clip-path: none;
         padding-bottom: 106px;
-        padding-top: 42px;
+        padding-top: 64px;
+      }
+    }
+
+    &__top {
+      background-color: var(--color-bg);
+      padding-top: 132px;
+
+      @include media-breakpoint-up(lg) {
+        background-color: var(--color-bg);
+        clip-path: polygon(0 0, 100% 0, 100% 92%, 0% 100%);
+        padding-bottom: 48px;
+        padding-top: 234px;
       }
     }
 
@@ -109,7 +120,7 @@
       margin-bottom: 16px;
 
       @include media-breakpoint-up(lg) {
-        margin-bottom: 86px;
+        margin-bottom: 0;
       }
     }
 
@@ -163,6 +174,10 @@
         }
       }
     }
+
+    &__hr {
+      border-bottom: 1px solid var(--color-line);
+    }
   }
 
   &__signup-form {
@@ -176,7 +191,7 @@
         pointer-events: none;
         position: absolute;
         right: 0;
-        top: 0;
+        top: 234px;
       }
     }
 
@@ -265,6 +280,12 @@
         font-size: 36px;
         line-height: 48px;
         margin-bottom: 45px;
+      }
+    }
+
+    &--perspective {
+      @include media-breakpoint-up(lg) {
+        padding-top: 0;
       }
     }
 
