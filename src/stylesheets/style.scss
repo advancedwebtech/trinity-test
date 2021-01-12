@@ -8,6 +8,9 @@
 
 .trinity {
   &__navbar {
+    $navbar: &;
+
+    transition: all 0.4s ease;
     z-index: 9999;
 
     @include media-breakpoint-up(lg) {
@@ -20,6 +23,7 @@
       left: 0;
       margin-bottom: 32px;
       padding: 8px 0;
+      transition: all 0.4s ease;
       width: 100%;
 
       @include media-breakpoint-up(lg) {
@@ -32,9 +36,35 @@
     }
 
     &__logo {
+      transition: all 0.4s ease;
+
       @include media-breakpoint-up(lg) {
         height: auto;
         width: 215px;
+      }
+    }
+
+    &--sticky {
+      background-color: var(--color-bg);
+
+      @include media-breakpoint-up(lg) {
+        padding: 8px 0;
+      }
+
+      #{ $navbar } {
+        & {
+          &__call {
+            margin-bottom: 0;
+          }
+
+          &__logo {
+            margin: 12px 0;
+
+            @include media-breakpoint-up(lg) {
+              margin: 0;
+            }
+          }
+        }
       }
     }
   }

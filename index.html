@@ -243,7 +243,15 @@
             slidesToShow: 2
           }
         }]
-      })
+      });
+
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 1) {
+          $('.trinity__navbar').addClass('trinity__navbar--sticky');
+        } else {
+          $('.trinity__navbar').removeClass('trinity__navbar--sticky');
+        }
+      });
     });
   </script>
 </body>
