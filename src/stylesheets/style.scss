@@ -415,6 +415,29 @@
   }
 
   &__customers-slider {
+    .slick-arrow {
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 46px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 25px;
+
+      &::before {
+        content: none;
+      }
+
+      &.slick-prev {
+        background-image: url(../images/arrow-left.png);
+        left: -90px;
+      }
+
+      &.slick-next {
+        background-image: url(../images/arrow-right.png);
+        right: -90px;
+      }
+    }
+
     .slick-dots {
       li {
         border-radius: 50%;
